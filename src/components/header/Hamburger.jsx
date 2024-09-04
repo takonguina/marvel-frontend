@@ -13,7 +13,7 @@ const Hamburger = () => {
       {hamburgerOpen ? (
         <GrClose
           className="icon-menu"
-          size={40}
+          size={32}
           onClick={() => {
             setHamburgerOpen(!hamburgerOpen);
           }}
@@ -21,7 +21,7 @@ const Hamburger = () => {
       ) : (
         <GiHamburgerMenu
           className="icon-menu"
-          size={48}
+          size={40}
           onClick={() => {
             setHamburgerOpen(!hamburgerOpen);
           }}
