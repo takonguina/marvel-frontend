@@ -1,5 +1,5 @@
-import Login from "../components/login/Login";
-import SignUp from "../components/login/SignUp";
+import Login from "../components/join/Login";
+import SignUp from "../components/join/SignUp";
 import { useState } from "react";
 import "./Join.css";
 
