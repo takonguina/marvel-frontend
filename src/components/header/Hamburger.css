@@ -10,7 +10,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
   opacity: 0;
-  background-color: blue;
+  background-color: var(--dark-background-color);
   position: fixed;
   top: 80px;
   left: 0;
@@ -26,6 +26,9 @@
 
 .burger {
   padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /****************/

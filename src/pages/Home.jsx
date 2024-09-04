@@ -1,9 +1,7 @@
+import { Navigate } from "react-router-dom";
+
 const Home = () => {
-  return (
-    <div className="home-container">
-      <div className="home-content">HOME</div>
-    </div>
-  );
+  return <Navigate to="/characters" />;
 };
 
 export default Home;

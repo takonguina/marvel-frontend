@@ -15,11 +15,15 @@ const Header = () => {
           <div className="header-user-button">
             <button>Connectes toi !</button>
           </div>
-          <button>Personnages</button>
-
-          <button>Comics</button>
-
-          <button>Favoris</button>
+          <Link to="/characters" className="nav-link">
+            <button>Personnages</button>
+          </Link>
+          <Link to="/comics" className="nav-link">
+            <button>Comics</button>
+          </Link>
+          <Link to="/favoris" className="nav-link">
+            <button>Favoris</button>
+          </Link>
         </div>
       </div>
     </div>

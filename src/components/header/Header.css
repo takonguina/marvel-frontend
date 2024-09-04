@@ -54,6 +54,11 @@
   border: 2px solid var(--red-marvel);
 }
 
+.nav-link {
+  text-decoration: none;
+  color: white;
+}
+
 /***************/
 /*     IMG     */
 /***************/
