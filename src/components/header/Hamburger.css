@@ -4,11 +4,24 @@
 }
 
 .hamburger-content {
-  display: none;
+  display: flex;
   flex-direction: column;
   width: 100vw;
   padding-top: 10px;
   padding-bottom: 10px;
+  opacity: 0;
+  background-color: blue;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  z-index: 1000;
+}
+
+.hamburger-content.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .burger {
@@ -33,10 +46,6 @@
     display: block;
   }
   .hamburger-container {
-    display: flex;
-  }
-
-  .hamburger-content {
     display: flex;
   }
 }
