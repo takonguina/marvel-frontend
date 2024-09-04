@@ -1,0 +1,101 @@
+@import "../../App.css";
+
+/**********************/
+/*      CONTAINER     */
+/**********************/
+
+.header-container {
+  background-color: var(--dark-background-color);
+  height: 80px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.header-content {
+  width: 1240px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+
+/**********************/
+/*      BUTTONS       */
+/**********************/
+
+.header-buttons > button {
+  border: 2px solid transparent;
+  height: 100%;
+}
+
+.header-buttons > button:hover {
+  box-sizing: border-box;
+  border-bottom: 3px solid var(--red-marvel);
+}
+
+.header-user-button {
+  background-color: var(--red-marvel);
+  padding: 10px;
+  font-weight: 480;
+  border: 2px solid transparent;
+}
+
+.header-user-button:hover {
+  color: var(--red-marvel);
+  background-color: var(--dark-background-color);
+  cursor: pointer;
+  border: 2px solid var(--red-marvel);
+}
+
+/***************/
+/*     IMG     */
+/***************/
+
+.header-content img {
+  width: 100px;
+}
+
+/****************/
+/*     ICON     */
+/****************/
+
+.icon-menu {
+  display: none;
+}
+
+/**********************/
+/*     RESPONSIVE     */
+/**********************/
+
+/* Tablette */
+@media only screen and (max-width: 1024px) {
+  .header-content {
+    background-color: aqua;
+  }
+
+  .header-content {
+    padding: 0 20px;
+  }
+
+  .header-buttons {
+    display: none;
+  }
+
+  .icon-menu {
+    display: block;
+  }
+}
+
+/* Téléphone */
+@media only screen and (max-width: 768px) {
+  .header-content {
+    background-color: yellowgreen;
+  }
+}
