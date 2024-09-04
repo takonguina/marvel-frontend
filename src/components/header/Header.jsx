@@ -13,7 +13,9 @@ const Header = () => {
         </Link>
         <div className="header-buttons">
           <div className="header-user-button">
-            <button>Connectes toi !</button>
+            <Link to="login" className="nav-link-red">
+              <button onClick={() => {}}>Connexion</button>
+            </Link>
           </div>
           <Link to="/characters" className="nav-link">
             <button>Personnages</button>

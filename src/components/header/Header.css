@@ -33,32 +33,46 @@
 .header-buttons > button {
   border: 2px solid transparent;
   height: 100%;
+  background-color: pink;
 }
 
 .header-buttons > button:hover {
   box-sizing: border-box;
-  border-bottom: 3px solid var(--red-marvel);
 }
 
 .header-user-button {
   background-color: var(--red-marvel);
   padding: 10px;
   font-weight: 480;
-  border: 2px solid transparent;
 }
 
 .header-user-button:hover {
   color: var(--red-marvel);
   background-color: var(--dark-background-color);
   cursor: pointer;
-  border: 2px solid var(--red-marvel);
 }
 
 .nav-link {
   text-decoration: none;
   color: white;
+  border: 2px solid transparent;
+  height: calc(100% - 4px);
+  display: flex;
+  align-items: center;
 }
 
+.nav-link:hover {
+  border-bottom: 2px solid var(--red-marvel);
+}
+
+.nav-link-red {
+  text-decoration: none;
+  color: white;
+}
+
+.header-user-button:hover > .nav-link-red {
+  color: var(--red-marvel);
+}
 /***************/
 /*     IMG     */
 /***************/
