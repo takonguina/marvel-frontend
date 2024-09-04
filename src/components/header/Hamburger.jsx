@@ -29,10 +29,18 @@ const Hamburger = () => {
       )}
 
       <div className={`hamburger-content ${hamburgerOpen ? "show" : ""}`}>
-        <div className="burger">
-          Connectes toi !<MdOutlineArrowForwardIos color="#ec1d25" size={24} />
-        </div>
-        <Link to="/" className="nav-link">
+        <Link to="/join" className="hamburger-nav-link">
+          <div
+            className="burger"
+            onClick={() => {
+              setHamburgerOpen(false);
+            }}
+          >
+            Connexion
+            <MdOutlineArrowForwardIos color="#ec1d25" size={24} />
+          </div>
+        </Link>
+        <Link to="/" className="hamburger-nav-link">
           <div
             className="burger"
             onClick={() => {
@@ -43,7 +51,7 @@ const Hamburger = () => {
             <MdOutlineArrowForwardIos color="#ec1d25" size={24} />
           </div>
         </Link>
-        <Link to="/comics" className="nav-link">
+        <Link to="/comics" className="hamburger-nav-link">
           <div
             className="burger"
             onClick={() => {
@@ -54,7 +62,7 @@ const Hamburger = () => {
             <MdOutlineArrowForwardIos color="#ec1d25" size={24} />
           </div>
         </Link>
-        <Link to="/favorite" className="nav-link">
+        <Link to="/favorite" className="hamburger-nav-link">
           <div
             className="burger"
             onClick={() => {

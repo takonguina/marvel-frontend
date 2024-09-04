@@ -12,11 +12,11 @@ const Header = () => {
           <img src="/marvel.svg" alt="marvel-logo" />
         </Link>
         <div className="header-buttons">
-          <div className="header-user-button">
-            <Link to="login" className="nav-link-red">
+          <Link to="/join" className="nav-link-red">
+            <div className="header-user-button">
               <button onClick={() => {}}>Connexion</button>
-            </Link>
-          </div>
+            </div>
+          </Link>
           <Link to="/characters" className="nav-link">
             <button>Personnages</button>
           </Link>

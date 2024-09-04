@@ -30,7 +30,10 @@
   align-items: center;
   justify-content: space-between;
 }
-
+.hamburger-nav-link {
+  text-decoration: none;
+  color: white;
+}
 /****************/
 /*     ICON     */
 /****************/

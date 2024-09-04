@@ -1,0 +1,43 @@
+.join-container {
+  min-height: calc(100vh - 80px);
+  background-image: url("../assets//img/blue-background.webp");
+  display: flex;
+  justify-content: center;
+}
+
+.join-content {
+  margin-top: 40px;
+  width: 600px;
+  display: flex;
+  background-color: white;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+.swipe-join {
+  font-size: 14px;
+  color: var(--red-marvel);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/**********************/
+/*     RESPONSIVE     */
+/**********************/
+
+/* Tablette */
+@media only screen and (max-width: 1024px) {
+  .join-content {
+    width: 500px;
+  }
+}
+
+/* Téléphone */
+@media only screen and (max-width: 768px) {
+  .join-content {
+    width: 325px;
+  }
+}
