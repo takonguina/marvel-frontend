@@ -17,20 +17,6 @@
   background-color: var(--red-marvel);
 }
 
-.pagination {
-  display: flex;
-  justify-content: space-between;
-  gap: 80px;
-  margin: 30px 0;
-}
-
-.loading-screen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
-}
-
 /**********************/
 /*        IMG         */
 /**********************/
@@ -42,13 +28,6 @@
   border-bottom: 5px solid var(--red-marvel);
 }
 
-.loading-phone-img {
-  display: none;
-}
-
-.loading-img {
-  margin-top: 30vh;
-}
 /**********************/
 /*        TEXT        */
 /**********************/
@@ -56,11 +35,6 @@
   padding: 15px;
   font-weight: 600;
   text-overflow: ellipsis;
-}
-
-.loading-text {
-  /* font-size: 20px; */
-  font-weight: bold;
 }
 
 /**********************/
@@ -84,11 +58,5 @@
   .character-card-container {
     gap: 30px;
     flex-basis: 40%;
-  }
-  .loading-phone-img {
-    display: block;
-  }
-  .loading-img {
-    display: none;
   }
 }

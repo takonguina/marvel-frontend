@@ -66,20 +66,21 @@ const Characters = () => {
           {"Page suivante >>"}
         </p>
       </div>
-      <div className="characters-content">
-        {isLoading ? (
-          <div className="loading-screen">
-            <img className="loading-img" src="loading.gif" alt="" />
-            <img className="loading-phone-img" src="loading-phone.gif" alt="" />
-            <p className="loading-text">LOADING..</p>
-          </div>
-        ) : (
-          characters &&
-          characters.map((characters, index) => {
-            return <CharacterCard characters={characters} key={index} />;
-          })
-        )}
-      </div>
+
+      {isLoading ? (
+        <div className="loading-screen">
+          <img className="loading-img" src="loading.gif" alt="" />
+          <img className="loading-phone-img" src="loading-phone.gif" alt="" />
+          <p className="loading-text">CHARGEMENT...</p>
+        </div>
+      ) : (
+        <div className="characters-content">
+          {characters &&
+            characters.map((characters, index) => {
+              return <CharacterCard characters={characters} key={index} />;
+            })}
+        </div>
+      )}
     </div>
   );
 };

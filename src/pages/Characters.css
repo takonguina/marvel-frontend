@@ -18,6 +18,14 @@
   gap: 20px;
 }
 
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  margin: 30px 0;
+  z-index: 10;
+}
+
 .search-bar {
   max-width: 100vw;
   width: 100%;
@@ -28,6 +36,23 @@
   align-items: center;
   justify-content: center;
   background-color: var(--dark-background-color);
+}
+
+.loading-phone-img {
+  display: none;
+}
+
+.loading-img {
+  margin-top: 30vh;
+}
+
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  position: absolute;
+  top: 151px;
 }
 
 /**********************/
@@ -55,6 +80,10 @@
   cursor: pointer;
 }
 
+.loading-text {
+  font-weight: bold;
+}
+
 /**********************/
 /*     RESPONSIVE     */
 /**********************/
@@ -78,5 +107,21 @@
   .search-bar input {
     padding: 13px;
     width: 60%;
+  }
+
+  .loading-phone-img {
+    display: block;
+    width: 100vw;
+    height: calc(100vh - 90px);
+  }
+
+  .loading-img {
+    display: none;
+  }
+
+  .loading-text {
+    position: absolute;
+    top: 20%;
+    font-size: 22px;
   }
 }
