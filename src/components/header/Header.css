@@ -33,7 +33,6 @@
 .header-buttons > button {
   border: 2px solid transparent;
   height: 100%;
-  background-color: pink;
 }
 
 .header-buttons > button:hover {

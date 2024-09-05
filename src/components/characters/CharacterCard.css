@@ -1,0 +1,40 @@
+/**********************/
+/*      CONTAINER     */
+/**********************/
+
+.character-card-container {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 200px;
+}
+/**********************/
+/*        IMG         */
+/**********************/
+
+.character-img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/**********************/
+/*     RESPONSIVE     */
+/**********************/
+
+/* Tablette landskape */
+@media only screen and (min-width: 1024px) {
+}
+
+/* Tablette */
+@media only screen and (max-width: 1024px) {
+}
+
+/* Téléphone */
+@media only screen and (max-width: 768px) {
+  .character-card-container {
+    width: 150px;
+  }
+}
