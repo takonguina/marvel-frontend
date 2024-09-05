@@ -5,7 +5,7 @@ import { GrClose } from "react-icons/gr";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-const Hamburger = () => {
+const Hamburger = ({ token, handleToken }) => {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
 
   return (
@@ -29,17 +29,32 @@ const Hamburger = () => {
       )}
 
       <div className={`hamburger-content ${hamburgerOpen ? "show" : ""}`}>
-        <Link to="/join" className="hamburger-nav-link">
-          <div
-            className="burger"
-            onClick={() => {
-              setHamburgerOpen(false);
-            }}
-          >
-            Connexion
-            <MdOutlineArrowForwardIos color="#ec1d25" size={24} />
-          </div>
-        </Link>
+        {token ? (
+          <Link to="/join" className="hamburger-nav-link">
+            <div
+              className="burger"
+              onClick={() => {
+                setHamburgerOpen(false);
+                handleToken();
+              }}
+            >
+              Déconnexion
+              <MdOutlineArrowForwardIos color="#ec1d25" size={24} />
+            </div>
+          </Link>
+        ) : (
+          <Link to="/join" className="hamburger-nav-link">
+            <div
+              className="burger"
+              onClick={() => {
+                setHamburgerOpen(false);
+              }}
+            >
+              Connexion
+              <MdOutlineArrowForwardIos color="#ec1d25" size={24} />
+            </div>
+          </Link>
+        )}
         <Link to="/" className="hamburger-nav-link">
           <div
             className="burger"

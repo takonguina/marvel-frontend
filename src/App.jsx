@@ -8,13 +8,14 @@ import Characters from "./pages/Characters";
 import Join from "./pages/Join";
 
 function App() {
-  const [token, setToken] = useState();
+  const [token, setToken] = useState(Cookies.get("token") || null);
 
   const handleToken = (token) => {
     if (token) {
       setToken(token);
       Cookies.set("token", token);
     } else {
+      setToken(null);
       Cookies.remove("token");
     }
   };
@@ -25,7 +26,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/characters" element={<Characters />} />
-        <Route path="/join" element={<Join handleToken={handleToken} />} />
+        <Route
+          path="/join"
+          element={<Join token={token} handleToken={handleToken} />}
+        />
       </Routes>
     </Router>
   );

@@ -6,8 +6,7 @@
 }
 
 .join-content {
-  margin-top: 40px;
-  width: 600px;
+  width: 500px;
   display: flex;
   background-color: white;
   height: fit-content;
@@ -15,6 +14,9 @@
   flex-direction: column;
   align-items: center;
   padding: 15px;
+  border-radius: 20px;
+  margin-top: 15vh;
+  gap: 30px;
 }
 
 .swipe-join {
@@ -22,6 +24,52 @@
   color: var(--red-marvel);
   cursor: pointer;
   text-decoration: underline;
+  padding: 10px;
+}
+
+/*****************/
+/* FORM FOR BOTH */
+/*****************/
+
+.form-join {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+/**********************/
+/*       INPUT        */
+/**********************/
+
+.form-join input {
+  padding: 15px;
+  border: none;
+  background-color: #e9ebf0;
+  border-radius: 5px;
+  width: 300px;
+}
+
+/**********************/
+/*       BUTTON       */
+/**********************/
+
+.form-join .join-submit {
+  color: white;
+  background-color: var(--red-marvel);
+  padding: 15px;
+  border-radius: 30px;
+  width: 330px;
+}
+
+/**********************/
+/*        TEXT        */
+/**********************/
+
+.error-join {
+  color: red;
+  font-size: 14px;
 }
 
 /**********************/
@@ -30,14 +78,14 @@
 
 /* Tablette */
 @media only screen and (max-width: 1024px) {
-  .join-content {
-    width: 500px;
-  }
 }
 
 /* Téléphone */
 @media only screen and (max-width: 768px) {
   .join-content {
     width: 325px;
+  }
+  .form-join input {
+    width: 250px;
   }
 }

@@ -1,11 +1,11 @@
 /**********************/
 /*      CONTAINER     */
 /**********************/
-.signup-container {
+.login-container {
   width: 100%;
 }
 
-.signup-content {
+.login-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +16,7 @@
 /*        TEXT        */
 /**********************/
 
-.signup-content h4 {
+.login-content h4 {
   font-weight: bold;
   font-size: 32px;
   margin-top: 10px;

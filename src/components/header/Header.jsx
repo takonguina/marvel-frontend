@@ -3,20 +3,33 @@ import Hamburger from "./Hamburger";
 
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ token, handleToken }) => {
   return (
     <div className="header-container">
       <div className="header-content">
-        <Hamburger />
         <Link to="/">
           <img src="/marvel.svg" alt="marvel-logo" />
         </Link>
+        <Hamburger token={token} handleToken={handleToken} />
         <div className="header-buttons">
-          <Link to="/join" className="nav-link-red">
+          {token ? (
             <div className="header-user-button">
-              <button onClick={() => {}}>Connexion</button>
+              <button
+                onClick={() => {
+                  handleToken();
+                }}
+              >
+                Déconnexion
+              </button>
             </div>
-          </Link>
+          ) : (
+            <Link to="/join" className="nav-link-red">
+              <div className="header-user-button">
+                <button>Connexion</button>
+              </div>
+            </Link>
+          )}
+
           <Link to="/characters" className="nav-link">
             <button>Personnages</button>
           </Link>
