@@ -13,7 +13,7 @@
 }
 
 .header-content {
-  width: 1240px;
+  max-width: 1240px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -95,18 +95,25 @@
 /*     RESPONSIVE     */
 /**********************/
 
+/* Tablette landskape */
+@media only screen and (min-width: 1024px) {
+  .header-content {
+    width: 80%;
+  }
+}
+
 /* Tablette */
 @media only screen and (max-width: 1024px) {
   .header-content {
     background-color: aqua;
   }
 
-  .header-content {
-    padding: 0 20px;
-  }
-
   .header-buttons {
     display: none;
+  }
+
+  .header-content {
+    width: 80%;
   }
 
   .icon-menu {
@@ -118,5 +125,6 @@
 @media only screen and (max-width: 768px) {
   .header-content {
     background-color: yellowgreen;
+    width: 90%;
   }
 }
