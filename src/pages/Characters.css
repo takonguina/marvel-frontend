@@ -41,8 +41,18 @@
   background-color: #e9ebf0;
   border: none;
 }
+
 .search-bar input:focus {
   outline-color: var(--red-marvel);
+}
+
+/**********************/
+/*        TEXT        */
+/**********************/
+
+.next-page-text {
+  color: var(--red-marvel);
+  cursor: pointer;
 }
 
 /**********************/
