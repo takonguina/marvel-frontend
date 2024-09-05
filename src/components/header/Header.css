@@ -13,7 +13,7 @@
 }
 
 .header-content {
-  max-width: 1240px;
+  width: 1240px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -95,9 +95,9 @@
 /**********************/
 
 /* Tablette landskape */
-@media only screen and (min-width: 1024px) {
+@media only screen and (max-width: 1350px) {
   .header-content {
-    width: 80%;
+    width: 90%;
   }
 }
 
@@ -109,10 +109,6 @@
 
   .header-buttons {
     display: none;
-  }
-
-  .header-content {
-    width: 80%;
   }
 
   .icon-menu {

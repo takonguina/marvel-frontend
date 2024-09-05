@@ -9,7 +9,7 @@ const CharacterCard = ({ characters }) => {
         src={`${thumbnail.path}.${thumbnail.extension}`}
         alt={`${name}-img`}
       />
-      {name}
+      <p className="character-name">{name.toUpperCase()}</p>
     </div>
   );
 };
