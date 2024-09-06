@@ -5,6 +5,7 @@ import { useState } from "react";
 import Header from "./components/header/Header";
 import Home from "./pages/Home";
 import Characters from "./pages/Characters";
+import Character from "./pages/Character";
 import Join from "./pages/Join";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/characters" element={<Characters />} />
+        <Route path="/character/:id" element={<Character />} />
         <Route
           path="/join"
           element={<Join token={token} handleToken={handleToken} />}

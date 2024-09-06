@@ -8,7 +8,12 @@ const Characters = () => {
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
-  // const [maxPage, setMaxPage] = useState(undefined);
+  const [maxPage, setMaxPage] = useState(undefined);
+
+  const handleMaxPage = (count) => {
+    const countPage = (count / 100).toFixed(0);
+    setMaxPage(countPage);
+  };
 
   useEffect(() => {
     const handleCharacters = async () => {
@@ -20,15 +25,21 @@ const Characters = () => {
             skip: (page - 1) * 100,
           }
         );
+        handleMaxPage(response.data.count);
         setCharacters(response.data.results);
         setIsLoading(false);
       } catch (error) {
         console.log(error.response.data);
       }
     };
+    setMaxPage(undefined);
     setIsLoading(true);
     handleCharacters();
   }, [search, page]);
+
+  useEffect(() => {
+    setPage(1);
+  }, [search]);
 
   return (
     <div className="characters-container">
@@ -57,14 +68,18 @@ const Characters = () => {
         )}
 
         <p className="current-page">{page}</p>
-        <p
-          className="next-page-text"
-          onClick={() => {
-            setPage(page + 1);
-          }}
-        >
-          {"Page suivante >>"}
-        </p>
+        {page <= maxPage - 1 ? (
+          <p
+            className="next-page-text"
+            onClick={() => {
+              setPage(page + 1);
+            }}
+          >
+            {"Page suivante >>"}
+          </p>
+        ) : (
+          <p></p>
+        )}
       </div>
 
       {isLoading ? (

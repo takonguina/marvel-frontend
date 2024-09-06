@@ -11,6 +11,7 @@
   background-color: var(--dark-background-color);
   transition: background-color 0.1s linear;
   clip-path: polygon(0 0, 100% 0, 100% 96%, 95% 100%, 0 100%);
+  cursor: pointer;
 }
 
 .character-card-container:hover {
