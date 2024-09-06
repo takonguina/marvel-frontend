@@ -76,8 +76,11 @@
 /**********************/
 
 .next-page-text {
-  color: var(--red-marvel);
   cursor: pointer;
+}
+
+.next-page-text:hover {
+  color: var(--red-marvel);
 }
 
 .loading-text {
@@ -99,6 +102,9 @@
 @media only screen and (max-width: 1024px) {
   .search-bar input {
     width: 60%;
+  }
+  .next-page-text:hover {
+    color: black;
   }
 }
 
