@@ -111,10 +111,6 @@
 
 /* Tablette */
 @media only screen and (max-width: 1024px) {
-  .header-content {
-    background-color: aqua;
-  }
-
   .header-buttons {
     display: none;
   }
