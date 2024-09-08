@@ -1,0 +1,55 @@
+/**********************/
+/*      CONTAINER     */
+/**********************/
+.comic-card-container {
+  flex: 1 1 30%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.comic-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/**********************/
+/*        IMG         */
+/**********************/
+
+.comic-card-content img {
+  width: 200px;
+}
+
+/**********************/
+/*        TEXT        */
+/**********************/
+
+.comic-card-content span {
+  font-weight: bold;
+}
+
+/**********************/
+/*     RESPONSIVE     */
+/**********************/
+
+/* Tablette landskape */
+@media only screen and (max-width: 1350px) {
+}
+
+/* Tablette */
+@media only screen and (max-width: 1024px) {
+}
+
+/* Téléphone */
+@media only screen and (max-width: 768px) {
+  .comic-card-content img {
+    width: 300px;
+  }
+
+  .comic-card-content span {
+    font-size: 26px;
+  }
+}

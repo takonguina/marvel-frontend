@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Character.css";
+import ComicCard from "../components/comics/ComicCard";
 
 const Character = () => {
   const { id } = useParams();
@@ -49,11 +50,6 @@ const Character = () => {
           <p>Loading</p>
         ) : (
           <div className="character-infos">
-            {/* <img
-              className="character-img-page"
-              src={`${data.thumbnail.path}.${data.thumbnail.extension}`}
-              alt=""
-            /> */}
             <div
               className="character-img-page"
               style={{
@@ -69,7 +65,7 @@ const Character = () => {
             <div className="character-comics-mentions">
               {data &&
                 data.comics.map((comic, index) => {
-                  return <span key={index}>{comic.title}</span>;
+                  return <ComicCard comic={comic} key={index} />;
                 })}
             </div>
           </div>
