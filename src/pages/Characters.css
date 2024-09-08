@@ -96,6 +96,10 @@
   .characters-content {
     width: 90%;
   }
+
+  .characters-container {
+    margin-top: 80px;
+  }
 }
 
 /* Tablette */

@@ -36,7 +36,7 @@ const Header = ({ token, handleToken }) => {
           <Link to="/comics" className="nav-link">
             <button>Comics</button>
           </Link>
-          <Link to="/favoris" className="nav-link">
+          <Link to="/favorite" className="nav-link">
             <button>Favoris</button>
           </Link>
         </div>

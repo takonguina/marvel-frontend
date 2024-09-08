@@ -2,11 +2,8 @@
 /*      CONTAINER     */
 /**********************/
 .comic-card-container {
-  flex: 1 1 30%;
   margin-top: 40px;
-  margin-bottom: 40px;
   display: flex;
-  justify-content: center;
 }
 
 .comic-card-content {
@@ -20,7 +17,8 @@
 /**********************/
 
 .comic-card-content img {
-  width: 200px;
+  height: 500px;
+  width: 350px;
 }
 
 /**********************/
@@ -28,7 +26,9 @@
 /**********************/
 
 .comic-card-content span {
+  font-size: 26px;
   font-weight: bold;
+  max-width: 350px;
 }
 
 /**********************/
@@ -37,6 +37,10 @@
 
 /* Tablette landskape */
 @media only screen and (max-width: 1350px) {
+  .comic-card-container {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }
 
 /* Tablette */
