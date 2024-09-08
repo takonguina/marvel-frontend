@@ -57,7 +57,13 @@ const Character = () => {
               }}
             >
               <div className="linear-gradient"></div>
-              <p>{data.name}</p>
+              <p
+                style={{
+                  top: data.name.length >= 26 ? "300px" : "330px",
+                }}
+              >
+                {data.name}
+              </p>
             </div>
             <div className="description-character">
               {data && data.description ? data.description : "Hero"}

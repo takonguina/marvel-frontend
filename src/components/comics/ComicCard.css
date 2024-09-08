@@ -46,10 +46,11 @@
 /* Téléphone */
 @media only screen and (max-width: 768px) {
   .comic-card-content img {
-    width: 300px;
+    width: 320px;
   }
 
   .comic-card-content span {
     font-size: 26px;
+    max-width: 320px;
   }
 }

@@ -1,4 +1,5 @@
 import CharacterCard from "../components/characters/CharacterCard";
+import Pagination from "../components/pagination/Pagination";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Characters.css";
@@ -53,7 +54,7 @@ const Characters = () => {
           }}
         />
       </div>
-      <div className="pagination">
+      {/* <div className="pagination">
         {page > 1 ? (
           <p
             onClick={() => {
@@ -80,7 +81,7 @@ const Characters = () => {
         ) : (
           <p></p>
         )}
-      </div>
+      </div> */}
 
       {isLoading ? (
         <div className="loading-screen">
@@ -89,12 +90,16 @@ const Characters = () => {
           <p className="loading-text">CHARGEMENT...</p>
         </div>
       ) : (
-        <div className="characters-content">
-          {characters &&
-            characters.map((characters, index) => {
-              return <CharacterCard characters={characters} key={index} />;
-            })}
-        </div>
+        <>
+          <Pagination page={page} setPage={setPage} maxPage={maxPage} />
+          <div className="characters-content">
+            {characters &&
+              characters.map((characters, index) => {
+                return <CharacterCard characters={characters} key={index} />;
+              })}
+          </div>
+          <Pagination page={page} setPage={setPage} maxPage={maxPage} />
+        </>
       )}
     </div>
   );
