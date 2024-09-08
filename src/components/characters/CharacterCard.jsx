@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./CharacterCard.css";
 import { useEffect, useState } from "react";
 
-const CharacterCard = ({ characters, favorites, handleFavorite }) => {
+const CharacterCard = ({ characters, favorites, handleFavorite, token }) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const { _id, name, thumbnail } = characters;
   const navigate = useNavigate();
@@ -36,26 +36,30 @@ const CharacterCard = ({ characters, favorites, handleFavorite }) => {
         />
         <p className="character-name">{name.toUpperCase()}</p>
       </div>
-      {isFavorite ? (
-        <FaHeart
-          className="like-icon"
-          size={32}
-          color="#ec1d25"
-          onClick={() => {
-            handleFavorite(characters);
-            setIsFavorite(!isFavorite);
-          }}
-        />
+      {token ? (
+        isFavorite ? (
+          <FaHeart
+            className="like-icon"
+            size={32}
+            color="#ec1d25"
+            onClick={() => {
+              handleFavorite(characters);
+              setIsFavorite(!isFavorite);
+            }}
+          />
+        ) : (
+          <FaRegHeart
+            className="like-icon"
+            size={32}
+            color={`lightgray`}
+            onClick={() => {
+              handleFavorite(characters);
+              setIsFavorite(!isFavorite);
+            }}
+          />
+        )
       ) : (
-        <FaRegHeart
-          className="like-icon"
-          size={32}
-          color={`lightgray`}
-          onClick={() => {
-            handleFavorite(characters);
-            setIsFavorite(!isFavorite);
-          }}
-        />
+        <></>
       )}
     </div>
   );

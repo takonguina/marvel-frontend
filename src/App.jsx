@@ -77,7 +77,11 @@ function App() {
         <Route
           path="/characters"
           element={
-            <Characters handleFavorite={handleFavorite} favorites={favorites} />
+            <Characters
+              handleFavorite={handleFavorite}
+              favorites={favorites}
+              token={token}
+            />
           }
         />
         <Route path="/character/:id" element={<Character />} />

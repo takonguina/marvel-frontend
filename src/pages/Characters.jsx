@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Characters.css";
 
-const Characters = ({ handleFavorite, favorites }) => {
+const Characters = ({ handleFavorite, favorites, token }) => {
   const [characters, setCharacters] = useState();
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
@@ -72,6 +72,7 @@ const Characters = ({ handleFavorite, favorites }) => {
                     key={index}
                     handleFavorite={handleFavorite}
                     favorites={favorites}
+                    token={token}
                   />
                 );
               })}
