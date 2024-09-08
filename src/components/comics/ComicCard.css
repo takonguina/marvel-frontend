@@ -4,6 +4,7 @@
 .comic-card-container {
   margin-top: 40px;
   display: flex;
+  position: relative;
 }
 
 .comic-card-content {

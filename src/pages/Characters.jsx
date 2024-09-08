@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Characters.css";
 
-const Characters = () => {
+const Characters = ({ handleFavorite, favorites }) => {
   const [characters, setCharacters] = useState();
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
@@ -66,7 +66,14 @@ const Characters = () => {
           <div className="characters-content">
             {characters &&
               characters.map((characters, index) => {
-                return <CharacterCard characters={characters} key={index} />;
+                return (
+                  <CharacterCard
+                    characters={characters}
+                    key={index}
+                    handleFavorite={handleFavorite}
+                    favorites={favorites}
+                  />
+                );
               })}
           </div>
           <Pagination page={page} setPage={setPage} maxPage={maxPage} />

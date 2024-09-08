@@ -14,8 +14,8 @@
   max-width: 1240px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-between;
+  width: 1240px;
 }
 
 .pagination {
@@ -95,6 +95,7 @@
 @media only screen and (max-width: 1350px) {
   .characters-content {
     width: 90%;
+    justify-content: space-evenly;
   }
 
   .characters-container {

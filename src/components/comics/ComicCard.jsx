@@ -1,7 +1,7 @@
 import "./ComicCard.css";
-
 const ComicCard = ({ comic }) => {
   const { title, thumbnail } = comic;
+
   return (
     <div className="comic-card-container">
       <div className="comic-card-content">

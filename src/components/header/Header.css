@@ -127,7 +127,6 @@
 /* Téléphone */
 @media only screen and (max-width: 768px) {
   .header-content {
-    /* background-color: yellowgreen; */
     background-color: var(--dark-background-color);
     width: 90%;
   }

@@ -25,8 +25,12 @@ const Comics = () => {
             skip: (page - 1) * 100,
           }
         );
+        // Sort alphabetically
+        const comicsList = response.data.results.sort((a, b) =>
+          a.title > b.title ? 1 : -1
+        );
         handleMaxPage(response.data.count);
-        setComics(response.data.results);
+        setComics(comicsList);
         setIsLoading(false);
       } catch (error) {
         console.log(error.response.data);

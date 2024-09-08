@@ -5,13 +5,15 @@
 .character-card-container {
   display: flex;
   flex-direction: column;
-  flex: 1 1 18%;
   height: 300px;
+  width: 230px;
   color: white;
   background-color: var(--dark-background-color);
   transition: background-color 0.1s linear;
-  clip-path: polygon(0 0, 100% 0, 100% 96%, 95% 100%, 0 100%);
+  /* clip-path: polygon(0 0, 100% 0, 100% 96%, 95% 100%, 0 100%); */
   cursor: pointer;
+  margin-bottom: 30px;
+  position: relative;
 }
 
 /**********************/
@@ -23,6 +25,17 @@
   width: 100%;
   object-fit: cover;
   border-bottom: 5px solid var(--red-marvel);
+}
+/**********************/
+/*        IMG         */
+/**********************/
+
+.like-icon {
+  position: absolute;
+  z-index: 50;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
 }
 
 /**********************/
@@ -53,7 +66,6 @@
 @media only screen and (max-width: 1024px) {
   .character-card-container {
     gap: 30px;
-    flex-basis: 30%;
   }
 }
 
@@ -61,6 +73,5 @@
 @media only screen and (max-width: 768px) {
   .character-card-container {
     gap: 30px;
-    flex-basis: 40%;
   }
 }

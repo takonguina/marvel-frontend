@@ -1,0 +1,68 @@
+/**********************/
+/*      CONTAINER     */
+/**********************/
+.favorite-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.favorite-content {
+  max-width: 1240px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.characters-favorite {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.favorite-scroll {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+/**********************/
+/*        TEXT        */
+/**********************/
+
+.title-favorite {
+  color: var(--red-marvel);
+  font-size: 32px;
+  font-weight: bold;
+  padding: 25px;
+}
+
+/**********************/
+/*     RESPONSIVE     */
+/**********************/
+
+/* Tablette landskape */
+@media only screen and (max-width: 1350px) {
+  .favorite-container {
+    top: 80px;
+    position: relative;
+  }
+
+  .favorite-content {
+    width: 90%;
+  }
+  .favorite-scroll {
+    justify-content: space-around;
+  }
+}
+
+/* Tablette */
+@media only screen and (max-width: 1024px) {
+}
+
+/* Téléphone */
+@media only screen and (max-width: 768px) {
+}
