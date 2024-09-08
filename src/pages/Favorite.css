@@ -40,6 +40,10 @@
   padding: 25px;
 }
 
+.no-favorite {
+  font-size: 18px;
+  font-weight: 300;
+}
 /**********************/
 /*     RESPONSIVE     */
 /**********************/

@@ -9,18 +9,21 @@ const Favorite = ({ favorites, handleFavorite, token }) => {
         <div className="characters-favorite">
           <span className="title-favorite">PERSONNAGES</span>
           <div className="favorite-scroll">
-            {favorites
-              ? favorites.map((character, index) => {
-                  return (
-                    <CharacterCard
-                      characters={character}
-                      key={index}
-                      favorites={favorites}
-                      handleFavorite={handleFavorite}
-                    />
-                  );
-                })
-              : "Aucun favori"}
+            {favorites.length > 0 ? (
+              favorites.map((character, index) => {
+                return (
+                  <CharacterCard
+                    characters={character}
+                    key={index}
+                    favorites={favorites}
+                    handleFavorite={handleFavorite}
+                    token={token}
+                  />
+                );
+              })
+            ) : (
+              <p className="no-favorite">Aucun favori</p>
+            )}
           </div>
         </div>
       </div>
