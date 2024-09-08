@@ -14,10 +14,6 @@
   cursor: pointer;
 }
 
-.character-card-container:hover {
-  background-color: var(--red-marvel);
-}
-
 /**********************/
 /*        IMG         */
 /**********************/
@@ -41,6 +37,13 @@
 /**********************/
 /*     RESPONSIVE     */
 /**********************/
+
+/* Desktop  */
+@media only screen and (min-width: 1400px) {
+  .character-card-container:hover {
+    background-color: var(--red-marvel);
+  }
+}
 
 /* Tablette landskape */
 @media only screen and (min-width: 1024px) {
