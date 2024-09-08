@@ -88,4 +88,8 @@
   .form-join input {
     width: 250px;
   }
+
+  .form-join .join-submit {
+    width: 250px;
+  }
 }

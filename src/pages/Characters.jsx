@@ -54,39 +54,10 @@ const Characters = () => {
           }}
         />
       </div>
-      {/* <div className="pagination">
-        {page > 1 ? (
-          <p
-            onClick={() => {
-              setPage(page - 1);
-            }}
-            className="next-page-text"
-          >
-            {"<< Page précédente"}
-          </p>
-        ) : (
-          <p> </p>
-        )}
-
-        <p className="current-page">{page}</p>
-        {page <= maxPage - 1 ? (
-          <p
-            className="next-page-text"
-            onClick={() => {
-              setPage(page + 1);
-            }}
-          >
-            {"Page suivante >>"}
-          </p>
-        ) : (
-          <p></p>
-        )}
-      </div> */}
-
       {isLoading ? (
         <div className="loading-screen">
-          <img className="loading-img" src="loading.gif" alt="" />
-          <img className="loading-phone-img" src="loading-phone.gif" alt="" />
+          <img className="loading-img" src="/loading.gif" alt="" />
+          <img className="loading-phone-img" src="/loading-phone.gif" alt="" />
           <p className="loading-text">CHARGEMENT...</p>
         </div>
       ) : (
